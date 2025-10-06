@@ -2,6 +2,11 @@
   <img src="https://raw.githubusercontent.com/filebrowser/logo/master/banner.png" width="550"/>
 </p>
 
+> [!Note]
+> This fork is a go-1.22.12 backport in order to use the file/folder hyperlink.
+> For personal use only.
+> Please check the original repo for the latest version.
+
 [![Build](https://github.com/filebrowser/filebrowser/actions/workflows/main.yaml/badge.svg)](https://github.com/filebrowser/filebrowser/actions/workflows/main.yaml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/filebrowser/filebrowser)](https://goreportcard.com/report/github.com/filebrowser/filebrowser)
 [![Documentation](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/filebrowser/filebrowser)
