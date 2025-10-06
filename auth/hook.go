@@ -123,12 +123,12 @@ func (a *HookAuth) GetValues(s string) {
 	s = strings.ReplaceAll(s, "\r\n", "\n")
 
 	// iterate input lines
-	for val := range strings.Lines(s) {
+	stringLines(s)(func(val string) bool {
 		v := strings.SplitN(val, "=", 2)
 
 		// skips non key and value format
 		if len(v) != 2 {
-			continue
+			return true
 		}
 
 		fieldKey := strings.TrimSpace(v[0])
@@ -137,7 +137,9 @@ func (a *HookAuth) GetValues(s string) {
 		if a.Fields.IsValid(fieldKey) {
 			m[fieldKey] = fieldValue
 		}
-	}
+
+		return true
+	})
 
 	a.Fields.Values = m
 }
